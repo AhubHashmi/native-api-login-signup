@@ -28,7 +28,7 @@ export default function HookEffect() {
             {isLoaded ? (<View style={styles.loader}><ActivityIndicator size="large" color="#0000ff" /></View>)
                 : (
                     <View>
-                        <Text style={styles.mainHeader}>List Of Students</Text>
+                        <Text style={styles.mainHeader}>List Of Products</Text>
                         <FlatList
                             data={myUserData}
                             renderItem={({ item }) => {
@@ -36,11 +36,9 @@ export default function HookEffect() {
                                     <View style={styles.card}>
                                         <View style={styles.imgContainer}>
                                             <Image
-                                                width={100}
-                                                height={100}
                                                 style={styles.imgStyle}
                                                 resizeMode="cover"
-                                                source={{ uri: item.image }}
+                                                source={{ width:'100%', height: 150, uri: item.image, }}
                                             />
                                         </View>
                                         <View>
